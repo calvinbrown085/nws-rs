@@ -12,7 +12,7 @@ pub struct NwsGlossaryResponse {
 #[derive(Deserialize, Serialize)]
 pub struct NwsGlossaryInfo {
     pub term: String,
-    pub defenition: String,
+    pub definition: String,
 }
 
 pub trait NwsGlossary {
@@ -25,4 +25,11 @@ impl NwsGlossary for NwsClient {
         let nws_alert: NwsGlossaryResponse = self.client.get(&host).send()?.json()?;
         Ok(nws_alert)
     }
+}
+
+#[test]
+fn test_glossary() {
+    let client = NwsClient::new(None);
+    println!("{:?}", client.get_glossary_terms());
+    assert_eq!(false, true)
 }
