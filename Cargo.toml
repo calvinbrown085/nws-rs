@@ -4,6 +4,8 @@ version = "0.0.1"
 authors = ["Calvin Brown <cab025@protonmail.com>"]
 edition = "2018"
 repository = "https://github.com/calvinbrown085/nws-rs"
+description = "A Rust wrapper around the National Weather Service API"
+license = "Apache-2.0"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
