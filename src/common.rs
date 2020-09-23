@@ -1,3 +1,4 @@
+use std::fmt;
 
 #[allow(dead_code)]
 #[derive(Debug)]
@@ -53,6 +54,17 @@ pub enum StateAbbr {
     WI,
     WY
 }
+//
+//impl fmt::Display for StateAbbr {
+//    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+//        match *self {
+//            StateAbbr::IA => write!(f, "IA"),
+//            Suit::Diamond => write!(f, "♦"),
+//            Suit::Spade => write!(f, "♠"),
+//            Suit::Club => write!(f, "♣"),
+//        }
+//    }
+//}
 
 #[test]
 fn test_display_impl() {
