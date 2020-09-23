@@ -26,10 +26,3 @@ impl NwsGlossary for NwsClient {
         Ok(nws_alert)
     }
 }
-
-//#[test]
-//fn test_glossary() {
-//    let client = NwsClient::new(None);
-//    println!("{:?}", client.get_glossary_terms());
-//    assert_eq!(false, true)
-//}
