@@ -3,7 +3,7 @@ name = "nws-rs"
 version = "0.0.1"
 authors = ["Calvin Brown <cab025@protonmail.com>"]
 edition = "2018"
-
+repository = "https://github.com/calvinbrown085/nws-rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
