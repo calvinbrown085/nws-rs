@@ -1,7 +1,7 @@
 # nws-rs
 
-[![MIT/Apache-2 licensed](https://img.shields.io/crates/l/reqwest.svg)](./LICENSE)
-
+[![Apache-2 licensed](https://img.shields.io/crates/l/nws-rs.svg)](./LICENSE)
+[![CI](https://github.com/calvinbrown085/nws-rs/workflows/Rust/badge.svg)](https://github.com/calvinbrown085/nws-rs/actions?query=workflow%3ARust)
 
 A Rust wrapper around the National Weather Service API.
 
