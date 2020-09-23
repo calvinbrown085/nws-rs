@@ -3,8 +3,10 @@ use reqwest::blocking::Client;
 use reqwest::header;
 use http::header::ACCEPT;
 
-mod alerts;
-mod glossary;
+pub mod alerts;
+pub mod common;
+pub mod glossary;
+pub mod stations;
 
 #[derive(Debug)]
 pub struct NwsClient {
@@ -15,7 +17,7 @@ pub struct NwsClient {
 
 impl NwsClient {
     #[allow(dead_code)]
-    fn new(user_agent: Option<String>) -> NwsClient {
+    pub fn new(user_agent: Option<String>) -> NwsClient {
         let mut headers = header::HeaderMap::new();
         headers.insert(ACCEPT, "application/geo+json".parse().unwrap());
 
