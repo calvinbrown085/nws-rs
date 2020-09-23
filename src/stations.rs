@@ -1,7 +1,6 @@
 use crate::NwsClient;
 use serde::{Deserialize, Serialize};
 use anyhow::Result;
-use serde_json::Value;
 use crate::common::StateAbbr;
 
 
@@ -65,6 +64,8 @@ pub struct NwsStationsResponse {
 pub trait NwsStation {
     fn get_all_stations(&self, state_abbr: Option<StateAbbr>, limit: Option<u32>) -> Result<NwsStationsResponse>;
     fn get_station_by_id(&self, station_id: &str) -> Result<NwsStationInfo>;
+    //TODO implement /stations/{stationId}/observations
+    //TODO implement /stations/{stationId}/observations/latest
     //TODO implement /stations/{stationId}/observations/{time}
 }
 

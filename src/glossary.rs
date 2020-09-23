@@ -20,9 +20,19 @@ pub trait NwsGlossary {
 }
 
 impl NwsGlossary for NwsClient {
+    /// Returns a list of glossary terms
+    ///
+    /// ```
+    /// use nws_rs::NwsClient;
+    /// use nws_rs::glossary::NwsGlossary;
+    ///
+    /// let client: NwsClient = NwsClient::new(None);
+    ///
+    /// let response = client.get_glossary_terms();
+    /// ```
     fn get_glossary_terms(&self) -> Result<NwsGlossaryResponse> {
-        let host = format!("{}/glossary", &self.host);
-        let nws_alert: NwsGlossaryResponse = self.client.get(&host).send()?.json()?;
+        let url = self.host.join("glossary")?;
+        let nws_alert: NwsGlossaryResponse = self.client.get(url).send()?.json()?;
         Ok(nws_alert)
     }
 }
